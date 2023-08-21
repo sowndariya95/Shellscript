@@ -1,7 +1,9 @@
 #!/bin/bash
 
 echo "Consistency is key for success"
+Person1=Sowndi
+Person2=saki
 
-echo "Sowndi: Hi Good evening how are you"
-echo "Saki: Fine How about you"
-echo "Sowndi: Fine"
+echo "$Person1: Hi Good evening how are you"
+echo "$Person2: Fine $Person1 How about you"
+echo "$Person1: Fine $Person2"
