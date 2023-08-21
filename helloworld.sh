@@ -1,3 +1,3 @@
 #!/bin/bash
 
-echo "try hard to achieve your goal"
+echo "Consistency is key for success"
