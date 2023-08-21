@@ -3,13 +3,14 @@
 Root=$(id -u)
 
 validate(){
-    if[ $1 -ne 0 ]
+    
+if [ $1 -ne 0 ]
     then
       echo "Installation is failure"
       exit 1
     else
       echo "Installation is success"
-    fi
+fi
 }
 
 if [ $Root -ne 0 ]
