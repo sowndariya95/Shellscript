@@ -8,4 +8,11 @@ echo "Execute the command with sudo permission"
 exit 1
 fi
 
-yum install mysql -y
+yum install mysqll -y
+
+if [ $? -ne 0 ]
+then 
+ echo "Installation is Failure"
+else
+ echo "Installation is success"
+ fi
