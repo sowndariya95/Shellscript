@@ -5,15 +5,15 @@ Root=$(id -u)
 validate(){
     if[ $1 -ne 0 ]
     then
-    echo "Installation is failure"
+      echo "Installation is failure"
     else
-    echo "Installation is success"
+      echo "Installation is success"
     fi
 }
 
 if [ $Root -ne 0 ]
 then
-echo "Execute the command with sudo permission"
+  echo "Execute the command with sudo permission"
 exit 1
 fi
 
