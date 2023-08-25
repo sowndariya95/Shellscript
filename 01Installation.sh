@@ -1,15 +1,15 @@
 #!/bin/bash
 
-R=\e[31m
-G=\e[32m
-N=\e[0m
+R="\e[31m"
+G="\e[32m"
+N="\e[0m"
 DATE=$(date +%F)
 Script_Name=$0
 Logfile=/tmp/$Script_Name-$DATE.log
 Package=("git" "mysql" "postfix" "mailx")
 
 validate(){
-    if [ $User_permission ne 0 ]
+    if [ $User_permission -ne 0 ]
     then 
      echo -e "$R Error : $N Run with root user privelage"
     exit 1
