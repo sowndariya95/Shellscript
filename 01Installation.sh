@@ -9,7 +9,7 @@ Logfile=/tmp/$Script_Name-$DATE.log
 Package=("git" "mysql" "postfix" "mailx")
 
 validate(){
-    if [ $User_permission -ne 0 ]
+    if [ $1 -ne 0 ]
     then 
      echo -e "$R Error : $N Run with root user privelage"
     exit 1
