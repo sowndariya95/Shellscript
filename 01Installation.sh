@@ -19,9 +19,9 @@ validate(){
 
 if [ $1 -ne 0 ]
 then
-    echo -e "$G Installation is $i success $N"
+    echo -e "$G Installation is $1 success $N"
 else 
-     echo -e "$R Package is already exist $N"
+     echo -e "$R Installation is $1 Failure $N"
 fi
 }
 
@@ -32,6 +32,8 @@ do
   then
     sudo yum install -y $i &>>$Logfile
     validate $? &>>$Logfile
+  else 
+   echo -e "$R Package is already exist $N"
   fi
 done
 }
