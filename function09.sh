@@ -15,7 +15,7 @@ if [ $1 -ne 0 ]
       echo -e "Installation is $R failure $N"
       exit 1
     else
-      echo "Installation is $G success $N"
+      echo -e "Installation is $G success $N"
 fi
 }
 
