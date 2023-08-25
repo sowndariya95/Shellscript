@@ -34,6 +34,6 @@ else  echo -e "$i $G already installed$N"
 }
 for i in $@
 do
-    yum list installed | grep $i >>$LOGFILE
+    yum list installed | grep $i >>$Logfile
     PACKAGE $?
 done
