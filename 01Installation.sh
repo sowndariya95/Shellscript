@@ -11,8 +11,8 @@ Package=("git" "mysql" "postfix" "mailx")
 validate(){
     if [ $1 -ne 0 ]
     then 
-     echo -e "$R Error : $N Run with root user privelage"
-    exit 1
+      echo -e "$R Error : $N Run with root user privelage"
+      exit 1
     fi
 }
 
