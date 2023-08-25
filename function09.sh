@@ -4,16 +4,18 @@ DATE=$(date +%F)
 Script_name=$0
 Logfile=/tmp/$Script_name-$DATE.log
 
-
+R="\e[31m"
+G="\e[32m"
+N="\e[0m"
 
 validate(){
     
 if [ $1 -ne 0 ]
     then
-      echo "Installation is failure"
+      echo -e "Installation is $R failure $N"
       exit 1
     else
-      echo "Installation is success"
+      echo "Installation is $G success $N"
 fi
 }
 
@@ -27,8 +29,8 @@ fi
 
 yum install mysql -y &>>$Logfile
 
-validate $?
+validate $? "Installing My sql"
 
  yum install postfix -y &>>$Logfile
 
-validate $?
+validate $? "Installing Postfix"
